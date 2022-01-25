@@ -1,7 +1,23 @@
-'use strict'
+"use strict";
 
 module.exports = async function (fastify, opts) {
-  fastify.get('/', async function (request, reply) {
-    return { root: true }
-  })
-}
+  fastify.get("/names", async function (request, reply) {
+    return [
+      {
+        name: "Astra Wiggins",
+      },
+      {
+        name: "Kitra Pitts",
+      },
+      {
+        name: "James Mcfadden",
+      },
+      {
+        name: "Grant Jimenez",
+      },
+      {
+        name: "Shaeleigh Morin",
+      },
+    ];
+  });
+};
